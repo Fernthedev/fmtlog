@@ -15,6 +15,10 @@ else()
     link_libraries(pthread)
 endif()
 
+if (DEFINED FMT_HEADER_ONLY)
+  add_compile_definitions(FMT_HEADER_ONLY)
+endif()
+
 link_directories(.)
 include_directories(fmt/include)
 
